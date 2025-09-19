@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental App</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="h4 mb-0">Booking Confirmed!</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <div class="mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#198754" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                </svg>
+                            </div>
+                            <h3>Thank you for your booking!</h3>
+                            <p class="text-muted">Your booking has been confirmed. We've sent a confirmation email to <span id="userEmail"></span></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Booking Details</h4>
+                                <p><strong>Booking ID:</strong> <span id="bookingId"></span></p>
+                                <p><strong>Car:</strong> <span id="carDetails"></span></p>
+                                <p><strong>Pickup:</strong> <span id="pickupInfo"></span></p>
+                                <p><strong>Drop-off:</strong> <span id="dropoffInfo"></span></p>
+                                <p><strong>Total Amount:</strong> <span id="totalAmount" class="fw-bold"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Customer Information</h4>
+                                <p><strong>Name:</strong> <span id="customerName"></span></p>
+                                <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+                                <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
+                                <p><strong>Address:</strong> <span id="customerAddress"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5>Additional Information</h5>
+                            <p>Your vehicle will be ready for pickup at the scheduled time. Please bring your driver's license and the credit card used for payment when picking up the vehicle.</p>
+                            <p>If you have any questions, please contact our customer service at <a href="gamil:carrentalco@gmail.com">carrentalco@gmail.com</a> or call us at +248 2123456.</p>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a href="index.html" class="btn btn-outline-primary me-md-2">Back to Home</a>
+                            <button id="printBtn" class="btn btn-primary">Print Confirmation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/booking-confirmation.js"></script>
+</body>
+</html>

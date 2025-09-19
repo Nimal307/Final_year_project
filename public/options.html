@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental App</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body-hm">
+
+  <nav class="navbar navbar-expand-lg bg-black">
+    <div class="container-fluid">
+      <img src="/img/Header-Logo.png" class="img-fluid" style="max-height: 50px;">
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html" id="menu">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="menu" href="/our_cars.html">Our Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="menu" href="/service.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="menu" href="/myBooking.html">My Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="menu" href="/about_us.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br>
+
+  <div class="form-container">
+    <div class="car-selection-container">
+    <div class="row">
+        <div id="car-details"></div>
+      </div>
+        <h4>Base Rental Price</h4>
+        <p id="basePrice" class="fw-bold text-success fs-2"></p>
+
+        <h5 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: x-large;">Options</h5>
+        <div class="form-check option">
+          <div class="shadow-sm p-3 mb-5">
+            <img src="/img/booster_seat.jpg" alt="" style="width: 100px;">
+            <div class="d-inline-block">
+              <label class="form-check-label" for="boosterSeat" style="margin-left: 2%;">
+                <span style="font-weight: 700;">Booster Seat (€6/day)</span>
+                <input type="number" id="boosterSeat" class="form-control d-inline-block w-auto ms-2" 
+                      style="width: 60px;" min="0" max="3" value="0" 
+                      data-price="6" data-daily="true" data-name="Booster Seat">
+              </label>
+              <p style="font-size: smaller; margin-top: 0.5rem;">Child Booster seat available and installed upon order.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-check option">
+          <div class="shadow-sm p-3 mb-5">
+            <img src="/img/baby_car_seat.jpg" alt="" style="width: 100px;">
+            <div class="d-inline-block">
+              <label class="form-check-label" for="babySeat" style="margin-left: 2%;">
+                <span style="font-weight: 700;">Baby Car Seat (€6/day)</span>
+                <input type="number" id="babySeat" class="form-control d-inline-block w-auto ms-2" 
+                      style="width: 60px;" min="0" max="3" value="0" 
+                      data-price="6" data-daily="true" data-name="Baby Car Seat">
+              </label>
+              <p style="font-size: smaller; margin-top: 0.5rem;">Baby car seat available and installed upon order.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-check option" id="option-div">
+          <input class="form-check-input" type="checkbox" name="cdw_1500" data-price="10" data-daily="true" data-name="Collision Damage Waiver 1500EUR" id="cdw1500">
+          <label class="form-check-label" for="cdw1500">
+            <span style="font-weight: 700;">Collision Damage Waiver 1500EUR (€10/day)</span><br>
+            <span style="font-size: medium;">Vehicle insurance excess that enables a 1500EUR Collision Damage Waiver fee.</span>
+          </label>
+        </div>
+        <div class="form-check option" id="option-div">
+          <input class="form-check-input" type="checkbox" name="cdw_1000" data-price="20" data-daily="true" data-name="Collision Damage Waiver 1000EUR" id="cdw1000">
+          <label class="form-check-label" for="cdw1000">
+            <span style="font-weight: 700;">Collision Damage Waiver 1000EUR (€20/day)</span><br>
+            <span style="font-size: medium;">Vehicle insurance excess that enables a 1000EUR Collision Damage Waiver fee.</span>
+          </label>
+        </div>
+        <div class="form-check option" id="option-div">
+          <input class="form-check-input" type="checkbox" name="full_cdw" data-price="40" data-daily="true" data-name="Full Collision Damage Waiver" id="fullcdw">
+          <label class="form-check-label" for="fullcdw">
+            <span style="font-weight: 700;">Full Collision Damage Waiver (€40/day)</span><br>
+            <span style="font-size: medium;">Full comprehensive damage cover.</span>
+          </label>
+        </div>
+
+        <hr>
+        <h4>Total Price: <span id="totalPrice" class="text-primary fw-semibold fs-2">€0</span></h4>
+        <a href="confirm.html" id="bookNowBtn" class="btn btn-success mt-3 fw-semibold" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BOOK NOW</a>
+      </div>
+    </div>
+  </div>
+  </div><br>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <img src="/img/Logo.png" alt="Logo" class="footer-logo">
+  
+      <p class="footer-text">
+        Spring Car Hire, Glacis, Mahe, Seychelles,<br>
+        Tel: (123456)<br>
+        bookings@gmail.com
+      </p>
+  
+      <a href="/terms_and_conditions.html" class="terms-condition" target="_blank">Terms & Conditions</a>
+  
+      <div class="payment-icons">
+        <img src="/img/euro-svgrepo-com.svg" alt="Euro">
+        <img src="/img/cc-visa-brands-solid.svg" alt="visa">
+        <img src="/img/mastercard-svgrepo-com.svg" alt="Mastercard">
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="footer-left">Copyright &copy; 2025 Spring Car Hire | Powered by spring Car Hire</div>
+      <div class="footer-right">
+        <a href="#"><img src="/img/phone-calling-svgrepo-com.svg" alt="Phone"></a>
+        <a href="#"><img src="/img/whatsapp-svgrepo-com.svg" alt="Whatsapp"></a>
+        <a href="#"><img src="/img/mail-svgrepo-com.svg" alt="Mail"></a>
+        <a href="#"><img src="/img/facebook-color-svgrepo-com.svg" alt="FaceBook"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  
+</body>
+</html>

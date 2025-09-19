@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body class="body-hm">
+ <nav class="navbar navbar-expand-lg bg-black">
+  <div class="container-fluid">
+    <img src="/img/Header-Logo.png" class="img-fluid" style="max-height: 50px;">
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/index.html" id="menu">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="menu" href="/our_cars.html">Our Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="menu" href="/service.html">Our Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="menu" href="/myBooking.html">My Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="menu" href="/about_us.html">About us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav><br><br><br>
+
+<center><div class="w-50 p-3 our_cars"><h1><span>About</span> <span style="color:#fbde69">Us</span></h1></div></center>
+<div class="container-sm about-us-container">
+    <h5 style="margin-left: 10px; margin-top:10px; color:#9d7e03; font-weight:600;">10 Years of Passion and Service Excellence</h3><br>
+    <p>Founded in 2014, driven with passion and unparalleled service excellence, Spring Car Hire has well established itself in the car rental industry of Seychelles. For over a decade, we have proudly served our customers with the highest standards in vehicle quality, rental support, and ease of mind service in line with our delicate customer experience-tailored mindset.</p><br>
+    <ul class="leaf-list">
+      <li style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: large">Forefront of Innovation</li>
+      <li style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: large">We Cater to your Comfort</li>
+      <li style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: large">Competitive Prices</li>
+    </ul>
+</div>
+
+<center><div class="w-50 p-3 our_cars"><h1><span>Get</span> <span style="color:#fbde69">In Touch</span></h1></div></center>
+
+<div class="form-container">
+  <div class="form-box">
+    <form id="form-about-us" method="get" action="" onsubmit="validateForm()">
+    <label style="color: black;" for="radioDefault">Topic</label>
+    
+      <div class="form-check">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" required>
+  <label class="form-check-label get-in-touch" for="radioDefault1" style="color: black;">
+    General
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+  <label class="form-check-label get-in-touch" for="radioDefault2" style="color: black;">
+   Booking 
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+  <label class="form-check-label get-in-touch" for="radioDefault3" style="color: black;">
+   Feedback 
+  </label>
+</div><br>
+
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control get-in-touch" aria-label="Username" aria-describedby="basic-addon1" placeholder="First Name" required name="name">
+</div>
+
+<div class="input-group mb-3">
+  <input type="email" class="form-control get-in-touch" aria-label="Username" aria-describedby="basic-addon1" placeholder="example@mail.com" required id="email" name="email">
+</div>
+<h4 id="error" style="display: none;">oncon</h4>
+<div class="mb-3">
+  <textarea class="form-control get-in-touch" id="exampleFormControlTextarea1" rows="3" placeholder="Message" required name="message"></textarea>
+</div>
+
+      <div class="d-grid">
+        <center><button type="submit" class="btn btn-light submit-btn" id="submit_btn1">Submit</button></center>
+      </div>
+    </form>
+  </div>
+</div><br>
+<footer class="footer">
+  <div class="footer-container">
+    <img src="/img/Logo.png" alt="Logo" class="footer-logo">
+
+    <p class="footer-text">
+      Spring Car Hire, Glacis, Mahe, Seychelles,<br>
+      Tel: (123456)<br>
+      bookings@gmail.com
+    </p>
+
+    <a href="/terms_and_conditions.html" class="terms-condition" target="_blank">Terms & Conditions</a>
+
+    <div class="payment-icons">
+      <img src="/img/euro-svgrepo-com.svg" alt="Euro">
+      <img src="/img/cc-visa-brands-solid.svg" alt="visa">
+      <img src="/img/mastercard-svgrepo-com.svg" alt="Mastercard">
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-left">Copyright &copy; 2025 Spring Car Hire | Powered by spring Car Hire</div>
+    <div class="footer-right">
+      <a href="#"><img src="/img/phone-calling-svgrepo-com.svg" alt="Phone"></a>
+      <a href="#"><img src="/img/whatsapp-svgrepo-com.svg" alt="Whatsapp"></a>
+      <a href="#"><img src="/img/mail-svgrepo-com.svg" alt="Mail"></a>
+      <a href="#"><img src="/img/facebook-color-svgrepo-com.svg" alt="FaceBook"></a>
+    </div>
+  </div>
+</footer>
+<script type="module" src="/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
